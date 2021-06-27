@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+header div.logotipo{
+  display: flex;
+  align-items: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 26px;
+  line-height: 20px;
+  text-shadow: 1px 1px grey;
+}
+
+header div.logotipo img{
+  width: 60px;
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.menu > a {
+	color: white;
+	padding: .75em;
+	text-align: center;
+	text-decoration: none;
+  font-size: large;
+	transition: all .5s;
+}
+
+.menu > a:hover {
+	color: yellow;
+  font-size: x-large;
+}
+
+.sectioninicio {
+	background: url('http://sindicontaspr.org.br/media/img_noticias/brasil-bandeira.jpg');
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+}
+
+.sectioninicio button {
+  box-shadow: 4px 5px 21px -4px white;
+}
+
+section .background{
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: white;
+	text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient( 135deg, #163448a6 10%, #193242a6 100%);
+}
+
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 80px;
+	margin: 30px;
+}
+
+h3 {
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 30px;
+}
+
+button {
+	padding: 0.5rem 2rem;
+  border: 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #163448;
+  border-radius: 10px;
+  transition: all .2s;
+  cursor: pointer;
+}  
+
+button:hover{
+  color: white;
+    background: linear-gradient(45deg, #224F6D, #163448);
+    transform: scale(1.05);
+    
+}
+button:active{
+   transform: scale(1.025);
+}
+
+.sectiondeputados {
+  margin: 50px;
+}
+
+.consultar_deputados {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.text_titulo_azul {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  color: #163448;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.text_subtitulo_cinza {
+  font-family: 'Open Sans', sans-serif;
+  margin: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(109 105 105);
+}
+
+input, textarea{
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 25%;
+  border: 1px solid #224f6d69;
+  font-family: 'Open Sans', sans-serif;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+}
+
+input:focus, textarea:focus {
+  outline: none !important;
+  border: none;
+  border-bottom: 1px solid #224f6d69;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+  color: transparent;
+}
+      
+/* CONTAINER CARD DEPUTADOS */
+.container {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-gap: 50px;
+  justify-content: center;
+  font-family: 'Baloo Paaji 2', cursive;
+  margin: 40px;
+}
+
+.card {
+  background-color: #163448;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.card__name {
+  margin: 50px 0 15px;
+  font-size: 1.5em;
+  align-content: center;
+}
+
+.card__name_partido{
+  margin-top: -30px;
+  font-size: 1.5em;
+}
+
+.card__detalhes{
+  font-size: 1em;
+}
+
+.card_detalhes_lista{
+  margin: 30px 20px 0px 50px;
+  font-size: 1em;
+}
+
+.card__image {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 5px solid #163448;
+  margin-top: 30px;
+  box-shadow: 0 10px 50px yellow;
+}
+
+.social-icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1em;
+}
+
+.social-icons i {
+  color: yellow;
+  position: absolute;
+  top: 0.95em;
+  left: 0.96em;
+  transition: all 265ms ease-out;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons a:before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #224F6D, #163448);
+  transition: all 265ms ease-out;
+}
+
+.social-icons a:hover:before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+
+.social-icons a:hover i {
+  transform: scale(2.2);
+  color: white;
+  background: -webkit-linear-gradient(45deg, #224F6D, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  font-size: 1.2em;
+}
+
+
+.sectionpartidos {
+  margin: 50px;
+}
+
+.consultar_partidos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+/* FIM DO CONTAINER CARD DEPUTADOS */
+
+sectionnoticias {
+  margin: 50px;
+}
+
+sectionnoticias .container {
+  margin: 40px;
+}
+
+.consultar_noticias {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.display_noticias_row {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: 40px;
+  justify-content: center;
+}
+
+.display_noticias_row img {
+  width: 30%;
+  border-radius: 5px;
+  box-shadow: 0 0 1em #163448;
+}
+
+.display_noticias_row:hover img{
+  transform: rotate(360deg);
+  transition: width 2s, height 2s, transform 2s;
+}
+
+.display_noticias_column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  width: 40%;
+}
+
+.display_noticias_column p {
+  margin-bottom: 20px;
+}
+
+.sectioneventos {
+  margin: 50px;
+}
+
+.display_eventos_row {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.display_eventos_row input {
+  margin: 20px;
+  width: 50%;
+}
+
+.display_eventos_row button {
+  width: 35%;
+}
+
+.consultar_eventos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.display_eventos_column {
+  display: flex;
+  margin: 30px;
+}
+
+.display_eventos_column_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20px;
+}
+
+.display_eventos_column_box_datahora {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  border-right: 2px solid;
+}
+
+.consultar_contato {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.display_contato_column_box {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px;
+}
+
+.display_contato_column_box form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  margin: 20px;
+  width: 25%;
+}
+
+.display_contato_column_box form input, 
+.display_contato_column_box form button {
+  width: 100%;
+}
+
+ .display_contato_column_box_textos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  margin: 20px 20px 20px 0px;
+  width: 30%;
+}
+
+.display_contato_column_box p {
+  text-align: left;
+  margin: 0px 0px 10px;
+}
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  min-height: 100px;
+  background-color: #163448;
+  color: white;
+  margin-top: 30px;
+  align-items: center;
+}
+
+footer p {
+  margin-left: 20px;
+}
+
+.back-to-top {
+  background-color: #163448;
+  border-radius: 65px;
+  bottom: 14px;
+  box-shadow: 4px 5px 21px -4px rgba(0, 0, 0, .75);
+  color: yellow;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+}
+
+.back-to-top i {
+  margin: 10px 12px;
+}
+
+.back-to-top::after {
+  display: flex;
+  justify-content: center;
+  padding-left: 1px;
+  padding-top: 10px;
+}
